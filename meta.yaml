@@ -1,0 +1,46 @@
+{% set name = "django-bootstrap-v5" %}
+{% set version = "1.0.7" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 55d3b0bef48a14491eb3429a1839857183c7b61ad1fbad1289a2fa1efedd4c99
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - beautifulsoup4 >=4.8.0,<5.0.0
+    - django >=2.2,<5.0
+    - pip
+    - python
+  run:
+    - beautifulsoup4 >=4.8.0,<5.0.0
+    - django >=2.2,<5.0
+    - python
+
+test:
+  imports:
+    - bootstrap5
+    - bootstrap5.templatetags
+    - docs
+    - tests
+    - tests.app
+
+about:
+  home: "https://github.com/zelenij/django-bootstrap-v5"
+  license: BSD
+  license_family: BSD
+  license_file: 
+  summary: "Bootstrap 5 support for Django projects"
+  doc_url: https://django-bootstrap-v5.readthedocs.io/
+  dev_url: https://github.com/zelenij/django-bootstrap-v5
+
+extra:
+  recipe-maintainers:
+    - https://github.com/gb119
