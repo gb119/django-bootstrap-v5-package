@@ -19,11 +19,11 @@ requirements:
     - django >=2.2,<5.0
     - pip
     - python
+    - poetry
   run:
     - beautifulsoup4 >=4.8.0,<5.0.0
     - django >=2.2,<5.0
     - python
-
 test:
   imports:
     - bootstrap5
