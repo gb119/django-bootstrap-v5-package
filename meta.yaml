@@ -28,9 +28,6 @@ test:
   imports:
     - bootstrap5
     - bootstrap5.templatetags
-    - docs
-    - tests
-    - tests.app
 
 about:
   home: "https://github.com/zelenij/django-bootstrap-v5"
